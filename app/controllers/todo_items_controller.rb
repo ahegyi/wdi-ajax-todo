@@ -25,6 +25,10 @@ class TodoItemsController < ApplicationController
   # GET /todo_items/new.json
   def new
     @todo_item = TodoItem.new
+    @todo_items_all = TodoItem.all
+
+    @completed_items = TodoItem.where(:completed => true, :deleted => false)
+    @todo_items = TodoItem.where(:completed => false, :deleted => false)
 
     respond_to do |format|
       format.html # new.html.erb

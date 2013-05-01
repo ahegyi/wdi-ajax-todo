@@ -1,5 +1,63 @@
-<h1>New todo_item</h1>
-
 <%= render 'form' %>
 
+<section id="todo">
+  <h2>To Do</h2>
+  <ol>
+    <% if @todo_items.empty? && false #never show this, at least for now %>
+      <li>Nothing to do!</li>
+    <% else %>
+      <% @todo_items.each do |todo_item| %>
+        <li data-id="<%= todo_item.id %>">
+          <input type="checkbox"><span><%= todo_item.name %></span>
+          <button>Delete</button>
+        </li>
+      <% end %>
+    <% end %>
+  </ol>
+</section>
+<section id="completed">
+  <h2>Completed!</h2>
+  <ol>
+    <% @completed_items.each do |todo_item| %>
+      <li data-id="<%= todo_item.id %>">
+        <input type="checkbox" checked="checked"><span><%= todo_item.name %></span>
+        <button>Delete</button>
+      </li>
+    <% end %>
+  </ol>
+  <p>(You deserve an ice cream cone for each of these!)</p>
+</section>
+
+<!-- 
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Due at</th>
+    <th>Completed</th>
+    <th>Deleted</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @todo_items.each do |todo_item| %>
+  <tr>
+    <td><%= todo_item.name %></td>
+    <td><%= todo_item.due_at %></td>
+    <td><%= todo_item.completed %></td>
+    <td><%= todo_item.deleted %></td>
+    <td><%= link_to 'Show', todo_item %></td>
+    <td><%= link_to 'Edit', edit_todo_item_path(todo_item) %></td>
+    <td><%= link_to 'Destroy', todo_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+ -->
+<!-- 
+<br />
+
+<%= link_to 'New Todo item', new_todo_item_path %>
+
+
 <%= link_to 'Back', todo_items_path %>
+ -->

@@ -1,6 +1,7 @@
-// Place all the styles related to the TodoItems controller here.
+/* // Place all the styles related to the TodoItems controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+*/
 
 body {
   font-family: Helvetica, Arial, sans-serif;
@@ -41,11 +42,11 @@ li button {
 }
 
 #todo ol li {
-  background-image: url(noun_project_14718.svg);
+  background-image: url(<%= asset_path 'noun_project_14718.svg' %>);
 }
 
 #completed ol li {
-  background-image: url(noun_project_2378.svg);
+  background-image: url(<%= asset_path 'noun_project_2378.svg' %>);
 
   text-decoration: line-through;
   color: #cc0000;
