@@ -1,3 +1,4 @@
+/*
 body {
   background-color: #fff;
   color: #333;
@@ -11,7 +12,7 @@ p, ol, ul, td {
   font-size: 13px;
   line-height: 18px;
 }
-
+*/
 pre {
   background-color: #eee;
   padding: 10px;
@@ -20,6 +21,8 @@ pre {
 
 a {
   color: #000;
+  padding: 2px;
+  margin: 2px;
   &:visited {
     color: #666;
   }

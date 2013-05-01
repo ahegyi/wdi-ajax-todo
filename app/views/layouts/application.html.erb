@@ -1,14 +1,47 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>AjaxTodo</title>
+  <title>Ajax Todo List!</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
 
-<%= yield %>
+  <div class="wrapper">
 
+    <h1>A Todo List, Built With Rails, jQuery, and AJAJ (Asynchronous Javascript and JSON)</h1>
+
+    <%= yield %>
+
+    <footer>
+      <p>For the ice cream icon: <a target="_blank" href="http://creativecommons.org/licenses/by/3.0/">thanks to simon child</a>, from <a target="_blank" href="http://thenounproject.com/">The Noun Project</a></p>
+      <p>For the egg icon: <a target="_blank" href="http://creativecommons.org/licenses/by/3.0/">thanks to Tom Glass, Jr.</a>, from <a target="_blank" href="http://thenounproject.com/">The Noun Project</a></p>
+    </footer>
+
+  </div>
 </body>
+
 </html>
+<!-- 
+    
+    <section id="todo">
+      <h2>To Do</h2>
+      <ol>
+        <li>Nothing to do!</li>
+      </ol>
+      <form action="#">
+        <input type="text" name="new-todo" id="newTodo" placeholder="Add a new todo item...">
+        <button type="submit">Add</button>
+      </form>
+    </section>
+    <section id="completed">
+      <h2>Completed!</h2>
+      <ol>
+        <li>Nothing completed.</li>
+      </ol>
+      <p>(You deserve an ice cream cone for each of these!)</p>
+    </section>
+ -->
